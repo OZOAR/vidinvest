@@ -1,17 +1,13 @@
 function init(country) {
   var location, mapId;
   switch(country) {
-    case 'Russia':
-      location = new google.maps.LatLng(55.7794591, 37.63926019999997);
-      mapId = 'map-first';
-      break;
     case 'Kazakhstan':
       location = new google.maps.LatLng(43.2306956, 76.93076229999997);
-      mapId = 'map-second';
+      mapId = 'map-first';
       break;
     case 'Czech':
       location = new google.maps.LatLng(50.1031559, 14.528471599999989);
-      mapId = 'map-third';
+      mapId = 'map-second';
       break;
   }
     var a = {
@@ -132,7 +128,6 @@ function init(country) {
     })
 }
 google.maps.event.addDomListener(window, "load", function() {
-  init('Russia');
   init('Kazakhstan');
   init('Czech');
 });
