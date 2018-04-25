@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>VID Invest Fund</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src=js/index.js></script>
+    <script src=js/textAnimation.js></script>
+    <script src=js/form.js></script>
+    <script src=js/signInUser.js></script>
+    <script src=js/signUpUser.js></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpxglI-rL4d2J_PRe1uixVbWFRgvWsQCs"></script>
+    <script src=js/map.js></script>
+    <script src=js/tabs.js></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src=js/portfolioChart.js></script>
+    <script src=js/tokenChart.js></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+</head>
+<body>
+    <header id="headerHome">
+        <div class="wrapper clearfix">
+            <div class="logo">
+                <a href="/"><img src="images/logo-white.png" alt=""></a>
+            </div>
+            <div class="navigation">
+                <nav>
+                    <div class="language-switcher">
+                        <form>
+                            <input type="hidden" name="lang" value="RU">
+                            <input type="submit" value="EN">
+                        </form>
+                    </div>
+                    <a href="#" class="loginCta">FAQ</a>
+                    <a href="#" class="loginCta">Login<i class="fas fa-user"></i></a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-banner">
+            <div class="main-banner-absolute">
+                <div class="banner-summary">
+                    <div class="wrapper">
+                        <h1 id="title">VID Invest Fund</span>
+            </h1>
+                        <p>Invest In digital future!</p>
+                        <p>VID Invest Fund offers an opportunity for people to join the growth of a new technological market</p>
+                        <a href="#" class="button loginCta">Join now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="variants-of-token">
+            <div class="wrapper">
+                <h2>Portfolios of VID Invest</h2>
+                <div class="variants-list">
+                    <div class="variant-token">
+                        <p><span>The "Conservative" portfolio with the passive management(VFC)</span>, which assigns the leading role in assets allocating to the largest cryptocurrencies capitalization, including Bitcoin. According to investment portfolio strategy with a conservative strategy rebalancing is going to be done at least once a month and it does not imply active trading and oriented towards to long-term investors.</p>
+                    </div>
+                    <div class="variant-token">
+                        <p><span>The "Aggressive" portfolio with the active management(VFA)</span> mainly based on high-yield and high-risk altcoins, which required to rebalance at least once a week. At the discretion of VID Invest Fund managers, rebalancing could be done every day. This strategy includes daytrading, swing trading, and also leaves the opportunity to profit from new investments, for example, the ICO. Moreover, the aggressive portfolio strategy implied active trading and it oriented to Investors with an elevated level to risks.</p>
+                    </div>
+                </div>
+                <div class="variants-list variants-buttons">
+                    <a href="#portfolios-block" class="button">Portfolios</a>
+                </div>
+            </div>
+        </div>
+        <div class="how-it-works">
+            <div class="wrapper">
+                <div class="how-summary">
+                    <h2>How it works?</h2>
+                    <p>With the unprecedented rise of cryptocurrencies and blockchain technology, new opportunities are arising in field of investment.</p>
+                    <a href="#" class="button join-button">White Paper</a>
+                </div>
+                <div class="how-img">
+                    <img src="images/blockchain3.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-charts" id="portfolios-block">
+            <h2>Portfolios</h2>
+            <div class="wrapper">
+                <div class="portfolio-tabs">
+                    <ul class="nav-tabs">
+                        <li class="tab active">
+                            <a href="#tabOne">Conservative portfolio</a>
+                        </li>
+                        <li class="tab">
+                            <a href="#tabTwo">Aggressive portfolio</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane" id="tabOne">
+                            <div class="charts">
+                              <div id="tokenChartConservative" class="chart-element"></div>
+                              <div id="portfolioChartConservative" class="chart-element"></div>
+                            </div>
+                            <div class="chart-summary">
+                                <p><i class="fas fa-chart-bar"></i>VFC price (USD): <span>$469</span></p>
+                                <p><i class="fas fa-chart-bar"></i>VFC price (BTC): <span>Ƀ748</span></p>
+                                <p><i class="fas fa-chart-line"></i>Funds yields: <span>693.86%</span></p>
+                            </div>
+                        </div>
+                        <div class="tab-pane hidden" id="tabTwo">
+                          <div class="charts">
+                            <div id="tokenChartAggressive" class="chart-element"></div>
+                            <div id="portfolioChartAggressive" class="chart-element"></div>
+                          </div>
+                          <div class="chart-summary">
+                              <p><i class="fas fa-chart-bar"></i>VFA price (USD): <span>$469</span></p>
+                              <p><i class="fas fa-chart-bar"></i>VFA price (BTC): <span>Ƀ748</span></p>
+                              <p><i class="fas fa-chart-line"></i>Funds yields: <span>693.86%</span></p>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="team">
+          <div class="team-member">
+            <p><img src="images/user.png" alt=""></p>
+            <p>Alexander, <span>CEO</span></p>
+            <p class="social">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </p>
+          </div>
+          <div class="team-member">
+            <p><img src="images/user.png" alt=""></p>
+            <p>Maksut, <span>Portfolio Manager</span></p>
+            <p class="social">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </p>
+          </div>
+          <div class="team-member">
+            <p><img src="images/user.png" alt=""></p>
+            <p>Timur, <span>Portfolio Manager</span></p>
+            <p class="social">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </p>
+          </div>
+          <div class="team-member">
+            <p><img src="images/user.png" alt=""></p>
+            <p>Anuar, <span>Trader</span></p>
+            <p class="social">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </p>
+          </div>
+          <div class="team-member">
+            <p><img src="images/user.png" alt=""></p>
+            <p>Vasiliy, <span>Trader-analyst</span></p>
+            <p class="social">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </p>
+          </div>
+          <div class="team-member">
+            <p><img src="images/user.png" alt=""></p>
+            <p>Daria, <span>Marketing Director</span></p>
+            <p class="social">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </p>
+          </div>
+          <div class="team-member">
+            <p><img src="images/user.png" alt=""></p>
+            <p>Vladislav, <span>Legal advisor</span></p>
+            <p class="social">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </p>
+          </div>
+        </div>
+        <div class="contacts">
+            <h2>Contact Us</h2>
+            <ul class="nav-tabs">
+                <li class="tab active">
+                    <a href="#tabOne"><i class="fas fa-map-marker"></i>Russia</a>
+                </li>
+                <li class="tab">
+                    <a href="#tabTwo"><i class="fas fa-map-marker"></i>Kazakhstan</a>
+                </li>
+                <li class="tab">
+                    <a href="#tabThree"><i class="fas fa-map-marker"></i>Czech Republic</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane" id="tabOne">
+                    <div id="map-first" class="map"></div>
+                    <div class="wrapper">
+                        <div class="contacts-info">
+                            <div class="address">
+                                <i class="fas fa-location-arrow"></i>
+                                <div class="address-info">
+                                    <p>Russia, Moscow</p>
+                                    <p>Протопопоский пер., 14, 129090</p>
+                                </div>
+                            </div>
+                            <div class="email">
+                                <i class="fas fa-envelope"></i>
+                                <div class="email-info">
+                                  <p><a href="mailto:vid_investfond@gmail.com">vid_investfond@gmail.com</a></p>
+                                  <p><a href="mailto:info@vfund.cz">info@vfund.cz</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane hidden" id="tabTwo">
+                    <div id="map-second" class="map"></div>
+                    <div class="wrapper">
+                        <div class="contacts-info">
+                            <div class="address">
+                                <i class="fas fa-location-arrow"></i>
+                                <div class="address-info">
+                                    <p>Алматы, Казахстан</p>
+                                    <p>ул. Маркова, 26, 050040</p>
+                                </div>
+                            </div>
+                            <div class="email">
+                                <i class="fas fa-envelope"></i>
+                                <div class="email-info">
+                                  <p><a href="mailto:vid_investfond@gmail.com">vid_investfond@gmail.com</a></p>
+                                  <p><a href="mailto:info@vfund.cz">info@vfund.cz</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane hidden" id="tabThree">
+                    <div id="map-third" class="map"></div>
+                    <div class="wrapper">
+                        <div class="contacts-info">
+                            <div class="address">
+                                <i class="fas fa-location-arrow"></i>
+                                <div class="address-info">
+                                    <p>Prague, Czech Republic</p>
+                                    <p>Nademlejnská 1069/20, 198 00</p>
+                                </div>
+                            </div>
+                            <div class="email">
+                                <i class="fas fa-envelope"></i>
+                                <div class="email-info">
+                                  <p><a href="mailto:vid_investfond@gmail.com">vid_investfond@gmail.com</a></p>
+                                  <p><a href="mailto:info@vfund.cz">info@vfund.cz</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="partners">
+            <div class="partners-item item">
+                <span><a href="https://www.cryptech.cloud/"><img src="images/partners/cryptech.png" alt="" width="100"></a></span>
+            </div>
+            <div class="partners-item item">
+                <span><a href="https://www.cryptech.cloud/"><img src="images/partners/cryptech-cloud.png" alt="" width="100"></a></span>
+            </div>
+            <div class="partners-item item">
+                <span><a href="https://cryptocode.by/"><img src="images/partners/cryptocode.png" alt="" width="100"></a></span>
+            </div>
+            <div class="partners-item item">
+                <span><a href="https://fundplatform.io/en/"><img src="images/partners/fund-green.png" alt="" width="100"></a></span>
+            </div>
+            <div class="partners-item item">
+                <span><a href="https://www.genesis-mining.com/"><img src="images/partners/gm-logo.png" alt="" width="100"></a></span>
+            </div>
+            <div class="partners-item item">
+                <span><a href="http://kabc.kz/"><img src="images/partners/kabc-logo.png" alt="" width="100"></a></span>
+            </div>
+            <div class="partners-item item">
+                <span><a href="https://nem.io/"><img src="images/partners/nem-logo.png" alt="" width="100"></a></span>
+            </div>
+            <div class="partners-item item">
+                <span><a href="https://newmining.ru/"><img src="images/partners/new-mining.jpg" alt="" width="100"></a></span>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="wrapper">
+            <h2>Join Us</h2>
+            <div class="social-links">
+                <a href="https://www.facebook.com/VID-Invest-Fund-1075679845915902/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/vidinvestfund"><i class="fab fa-twitter"></i></a>
+                <a href="https://t.me/vidinvestfund"><i class="fab fa-telegram"></i></a>
+                <a href="mailto:vid_investfond@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/company/vid-invest-fund/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="footer-navigation">
+                <a href="#">FAQ</a>
+                <a href="#">White Paper</a>
+            </div>
+        </div>
+    </footer>
+    <div id="popupBg" class="hidden"></div>
+    <div class="login-form popup hidden">
+        <a href="#" id="closeLoginForm"><i class="far fa-times-circle"></i></a>
+        <div class="login-form-wrapper sign-in">
+            <h2>Sign In</h2>
+            <div class="error-message hidden">
+                <p>Please enter valid data</p>
+            </div>
+            <form id="signInForm">
+                <div class="email form-element">
+                    <input type="email" name="email" placeholder="E-mail address">
+                    <i class="far fa-envelope"></i>
+                </div>
+                <div class="password form-element">
+                    <input type="password" name="password" placeholder="Password">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <a href="#" class="button" id="signInButton">Sign In</a>
+            </form>
+            <div class="additional-links">
+                <div class="remember-me">
+                    <input type="checkbox" id="rememberMe">
+                    <label for="contactChoice1" for="rememberMe">Remember me</label>
+                </div>
+                <div class="new-user">
+                    <span>New here?
+                      <a href="#" id="switchToSignUp">Sign Up</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="login-form-wrapper sign-up hidden">
+            <h2>Sign Up</h2>
+            <div class="error-message hidden">
+                <p>Please enter valid data</p>
+            </div>
+            <div class="info-message">
+                <p>Please fill your email and we will create your account</p>
+            </div>
+            <form id="signUpForm">
+                <div class="email form-element">
+                    <input type="email" name="email" placeholder="E-mail address">
+                    <i class="far fa-envelope"></i>
+                </div>
+                <a href="#" class="button" id="signUpButton">Join</a>
+            </form>
+            <div class="success-message hidden">
+                <p>Thanks for joining. We will connect with you!</p>
+            </div>
+            <div class="additional-links">
+                <div class="new-user">
+                    <span>Already a member?
+                      <a href="#" id="switchToSignIn">Sign In</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
