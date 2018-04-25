@@ -39,7 +39,7 @@ function initChart(data, id, label) {
       },
       yAxis: {
           title: {
-              text: label + ' price (USD)'
+              text: label + ' price (BTC)'
           }
       },
       legend: {
@@ -73,7 +73,7 @@ function initChart(data, id, label) {
       },
       series: [{
           type: 'area',
-          name: label + ' price (USD)',
+          name: label + ' price (BTC)',
           data: data
       }]
   });
