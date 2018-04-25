@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(window).on('load', $('#title'), function(){
  $.fn.animate_Text = function() {
   var string = this.text();
   return this.each(function(){
