@@ -294,7 +294,7 @@ main.margin-main{
 }
 .how-img img {
   width: 100%;
-  max-width: 300px;
+  max-width: 500px;
   margin: 0 auto;
 }
 .how-it-works .button,
@@ -682,7 +682,7 @@ footer p {
 }
 .contacts .nav-tabs .tab {
   display: inline-block;
-  width: 33.333333%;
+  width: 50%;
 }
 .contacts .nav-tabs .tab a {
   display: inline-block;
